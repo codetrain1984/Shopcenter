@@ -6,6 +6,7 @@ export const Products = styled(Box)(({ theme }) => ({
   justifyContent: 'center',
   alignItems: 'center',
   flexDirection: 'column',
+  paddingTop: '15px',
   [theme.breakpoints.up('md')]: {
     position: 'relative',
   },
@@ -13,12 +14,24 @@ export const Products = styled(Box)(({ theme }) => ({
 
 export const ProductImage = styled('img')(({ src, theme }) => ({
   src: `url(${src})`,
-  width: '100%',
+  objectFit: 'cover',
+  // width: '100%',
+  width: '350px',
+  height: '350px',
   background: colors.light_gray,
   padding: '10px',
+
   [theme.breakpoints.down('md')]: {
-    width: '80%',
-    padding: '24px',
+    // width: '80%',
+    width: '280px',
+    height: '280px',
+    // padding: '24px',
+  },
+  [theme.breakpoints.down('sm')]: {
+    // width: '80%',
+    width: '350px',
+    height: '350px',
+    // padding: '24px',
   },
 }))
 
@@ -27,20 +40,21 @@ export const ProductActionButton = styled(IconButton)(() => ({
   margin: 4,
 }))
 
-export const ProductFavButton = styled(ProductActionButton)(
-  ({ isFav, theme }) => ({
-    color: isFav ? colors.primary : colors.light,
-    [theme.breakpoints.up('md')]: {
-      position: 'absolute',
-      right: 0,
-      top: 0,
-    },
-  }),
-)
+export const ProductFavButton = styled(ProductActionButton, {
+  shouldForwardProp: (prop) => prop !== 'isFav',
+})(({ isFav, theme }) => ({
+  color: isFav ? colors.primary : colors.light,
+  [theme.breakpoints.up('md')]: {
+    position: 'absolute',
+    right: '3%',
+    top: '6%',
+  },
+}))
 
 export const ProductAddCart = styled(Button)(({ show, theme }) => ({
   width: '120px',
   fontSize: '12px',
+
   [theme.breakpoints.up('md')]: {
     position: 'absolute',
     bottom: '2%',
@@ -59,7 +73,9 @@ export const ProductMetaWrapper = styled(Button)(({ show, theme }) => ({
   flexDirection: 'column',
   alignItems: 'center',
 }))
-export const ProductActionWrapper = styled(Button)(({ show, theme }) => ({
+export const ProductActionWrapper = styled(Button, {
+  shouldForwardProp: (prop) => prop !== 'show',
+})(({ show, theme }) => ({
   [theme.breakpoints.up('md')]: {
     display: show ? 'visible' : 'none',
     position: 'absolute',

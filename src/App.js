@@ -1,5 +1,5 @@
 import './App.css'
-import { Container, ThemeProvider } from '@mui/material'
+import { Box, Container, ThemeProvider, Typography } from '@mui/material'
 import theme from './styles/theme'
 import Appbar from './components/Appbar'
 import Banner from './components/Banner/Banner'
@@ -13,6 +13,11 @@ function App() {
         <Appbar />
         <Banner />
         <Promotions />
+        <Box p={4}>
+          <Typography textAlign={'center'} variant="h4">
+            Our Products
+          </Typography>
+        </Box>
         <Products />
 
         {/* 

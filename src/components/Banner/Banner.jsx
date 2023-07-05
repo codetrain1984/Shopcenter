@@ -13,10 +13,10 @@ export default function Banner() {
   const matches = useMediaQuery(theme.breakpoints.down('md'))
   return (
     <BannerContainer>
-      <BannerImage src="/Images/Banner/Bag3.jpg" />
+      <BannerImage src="/Images/Banner/main.jpg" />
       <BannerContent>
         <Typography variant="h6">Huge Collection</Typography>
-        <BannerTitle>New Bags</BannerTitle>
+        <BannerTitle>New Shoes</BannerTitle>
         <BannerDescription>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
           repellendus vel nesciunt suscipit quibusdam earum blanditiis ullam

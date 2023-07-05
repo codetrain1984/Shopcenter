@@ -1,51 +1,51 @@
 const products = [
   {
     id: 1,
-    name: 'Elite Series',
-    price: 189.99,
+    name: 'Nike Series',
+    price: 589.99,
     desc:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, eveniet. Impedit ipsam explicabo eaque iste.',
-    img: '/Images/products/bag1.jpg',
+    img: '/Images/products/shoe1.jpg',
   },
   {
     id: 2,
-    name: 'Casual',
-    price: 129.99,
+    name: 'Hoka',
+    price: 429.99,
     desc:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, eveniet. Impedit ipsam explicabo eaque iste.',
-    img: '/Images/products/bag2.jpg',
+    img: '/Images/products/shoe2.jpg',
   },
   {
     id: 3,
-    name: 'Best Tote',
+    name: 'Sport',
     price: 389.99,
     desc:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, eveniet. Impedit ipsam explicabo eaque iste.',
-    img: '/Images/products/bag3.jpg',
+    img: '/Images/products/shoe3.jpg',
   },
   {
     id: 4,
-    name: 'Charming Series',
-    price: 769.99,
+    name: 'Men Style',
+    price: 169.99,
     desc:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, eveniet. Impedit ipsam explicabo eaque iste.',
-    img: '/Images/products/bag4.jpg',
+    img: '/Images/products/shoe4.jpg',
   },
   {
     id: 5,
-    name: 'New Hip',
-    price: 199.99,
+    name: 'New Series',
+    price: 799.99,
     desc:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, eveniet. Impedit ipsam explicabo eaque iste.',
-    img: '/Images/products/bag5.jpg',
+    img: '/Images/products/shoe5.jpg',
   },
   {
     id: 6,
-    name: 'Super Backpack',
+    name: 'Casual',
     price: 139.99,
     desc:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, eveniet. Impedit ipsam explicabo eaque iste.',
-    img: '/Images/products/bag6.jpg',
+    img: '/Images/products/shoe6.jpg',
   },
 ]
 export default products
