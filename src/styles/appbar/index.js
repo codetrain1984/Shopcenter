@@ -1,4 +1,4 @@
-import { Box, List, Typography, styled } from '@mui/material'
+import { Box, IconButton, List, Typography, styled } from '@mui/material'
 import { colors } from '../theme'
 
 //container
@@ -38,3 +38,11 @@ export const ActionIconsContainerMobile = styled(Box)(() => ({
   borderTop: `1px solid ${colors.border}`,
 }))
 export const ActionIconsContainerDesktop = styled(Box)(() => ({}))
+
+export const DrawerCloseButton = styled(IconButton)(() => ({
+  position: 'absolute',
+  bottom: 30,
+  left: '180px',
+  zIndex: 9999,
+  color: colors.primary,
+}))

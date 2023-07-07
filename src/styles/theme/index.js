@@ -43,6 +43,17 @@ const theme = createTheme({
         disableElevation: true,
       },
     },
+    MuiDrawer: {
+      styleOverrides: {
+        paper: {
+          width: 250,
+          background: colors.secondary,
+          color: colors.black,
+          borderRadius: '0px 0px 100px 0px',
+          borderRight: `3px solid ${colors.primary}`,
+        },
+      },
+    },
   },
 })
 export default theme

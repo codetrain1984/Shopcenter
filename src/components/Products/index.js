@@ -1,7 +1,7 @@
 import { Container, Grid, useMediaQuery, useTheme } from '@mui/material'
 import React from 'react'
 import products from '../../data'
-import SingleProductMobile from './SingleProductDesktop'
+import SingleProductMobile from './SingleProductMobile'
 import SingleProductDesktop from './SingleProductDesktop'
 
 export default function Products() {

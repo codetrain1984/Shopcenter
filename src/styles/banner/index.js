@@ -1,4 +1,4 @@
-import { Box, Typography, styled } from '@mui/material'
+import { Box, Button, Typography, styled } from '@mui/material'
 import theme, { colors } from '../theme'
 
 export const BannerContainer = styled(Box)(() => ({
@@ -53,5 +53,21 @@ export const BannerDescription = styled(Typography)(() => ({
     lineHeight: 1.15,
     letterSpacing: 1.15,
     marginBottom: '1.5rem',
+  },
+}))
+
+export const BannerShopButton = styled(Button)(({ theme }) => ({
+  padding: '20px 0px',
+  color: colors.white,
+  fontWeight: 'bold',
+  fontSize: '16px',
+  backgroundColor: colors.primary,
+  width: '100%',
+  '&:hover': {
+    backgroundColor: colors.inverse,
+  },
+  [theme.breakpoints.down('sm')]: {
+    padding: '10px 0px',
+    fontSize: '14px',
   },
 }))

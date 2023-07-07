@@ -5,11 +5,13 @@ import {
   BannerContent,
   BannerDescription,
   BannerImage,
+  BannerShopButton,
   BannerTitle,
 } from '../../styles/banner'
 
 export default function Banner() {
   const theme = useTheme()
+  console.log(theme)
   const matches = useMediaQuery(theme.breakpoints.down('md'))
   return (
     <BannerContainer>
@@ -22,6 +24,7 @@ export default function Banner() {
           repellendus vel nesciunt suscipit quibusdam earum blanditiis ullam
           itaque maxime ut!
         </BannerDescription>
+        <BannerShopButton color="primary">shop now</BannerShopButton>
       </BannerContent>
     </BannerContainer>
   )

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
   ProductActionButton,
   ProductActionWrapper,
@@ -12,33 +12,32 @@ import { Stack, Typography } from '@mui/material'
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import ShareIcon from '@mui/icons-material/Share'
 import FitScreenIcon from '@mui/icons-material/FitScreen'
-import ProductDetails from '../ProductDetails'
 import useDialogModal from '../../hooks/useDialogModal'
+import ProductDetails from '../ProductDetails'
 
-export default function SingleProductDesktop({ product, matches }) {
-  const [showOptions, setShowOptions] = useState(false)
+export default function SingleProductMobile({ product, matches }) {
   const [ProductDetailDialog, showProductDetailDialog] = useDialogModal(
     ProductDetails,
   )
 
-  const handleMouseEnter = () => {
-    setShowOptions(true)
-  }
-  const handleMouseLeave = () => {
-    setShowOptions(false)
-  }
   return (
     <>
-      <Products onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <Products>
         <ProductImage src={product.img} />
-        <ProductFavButton isFav={0}>
-          <FavoriteIcon />
-        </ProductFavButton>
-        {showOptions && (
-          <ProductAddCart variant="contained">Add to cart</ProductAddCart>
-        )}
-        <ProductActionWrapper show={showOptions}>
-          <Stack direction={'column'}>
+        <ProductMetaWrapper>
+          <Typography variant={matches ? 'h6' : 'h5'}>
+            {product.name}
+          </Typography>
+          <Typography variant={matches ? 'caption' : 'body1'}>
+            ${product.price}
+          </Typography>
+        </ProductMetaWrapper>
+
+        <ProductActionWrapper>
+          <Stack direction={'row'}>
+            <ProductFavButton isFav={1}>
+              <FavoriteIcon />
+            </ProductFavButton>
             <ProductActionButton>
               <ShareIcon color="primary" />
             </ProductActionButton>
@@ -49,12 +48,7 @@ export default function SingleProductDesktop({ product, matches }) {
           </Stack>
         </ProductActionWrapper>
       </Products>
-      <ProductMetaWrapper>
-        <Typography variant={matches ? 'h6' : 'h5'}>{product.name}</Typography>
-        <Typography variant={matches ? 'caption' : 'body1'}>
-          ${product.price}
-        </Typography>
-      </ProductMetaWrapper>
+      <ProductAddCart variant="contained">Add to cart</ProductAddCart>
       <ProductDetailDialog product={product} />
     </>
   )
